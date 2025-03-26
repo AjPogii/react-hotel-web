@@ -1,0 +1,232 @@
+.Rooms_container {
+    margin: 0 auto;
+    width: 90%;
+    border: 2px solid red;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.Rooms_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+    margin-bottom: 2rem;
+}
+
+.Rooms_title p {
+    font-size: 20px;
+    width: 80%;
+    color: #1e1e1e;
+}
+
+.Room_Cards {
+    gap: 20px;
+    display: flex;
+    width: auto;
+    max-width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+
+    text-align: center;
+
+
+}
+
+.Room_Card {
+    width: calc(33.333% - 14px);
+    min-width: 280px;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    gap: 20px;
+
+
+    margin: 0 auto;
+
+
+}
+
+.Room_Img {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.Room_Img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+.Room_Content {
+    padding: 20px;
+}
+
+.Room_Content h3 {
+    font-size: 1.25rem;
+    color: #5d4b3e;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+
+.Room_card:hover {
+    transform: translateY(-5px);
+}
+
+.features {
+    margin-bottom: 20px;
+}
+
+.feature {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #333;
+
+}
+
+.detailsButton {
+    display: block;
+    align-items: center;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: fit-content;
+
+
+}
+
+.bullet {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    left: 5px;
+    top: 8px;
+    background-color: #5d4b3e;
+    border-radius: 50%;
+    flex-shrink: 0;
+    text-align: left;
+    margin: 0;
+    position: absolute;
+}
+
+.arrowIcon {
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.arrowButton {
+    position: absolute;
+    top: 45%;
+
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+
+}
+
+.prevButton {
+    left: -20px;
+}
+
+.nextButton {
+    right: -20px;
+}
+
+.slick-center .Room_card {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.slick-slide:not(.slick-center) .Room_card {
+    opacity: 0.7;
+}
+
+
+.slider {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slide {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.slick-center .Room_card {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.slick-slide:not(.slick-center) .Room_card {
+    opacity: 0.7;
+}
+
+
+.dotsNavigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+
+}
+
+
+.dot:hover,
+.dot.active,
+.slick-active .dot {
+    background-color: #a08a6c;
+    transform: scale(1.2);
+}
+
+.viewAllContainer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.viewAllButton {
+    font-size: 1rem;
+    padding: 10px 25px;
+}
+
+/*:global(.slick-track) {
+    display: flex !important;
+}
+
+:global(.slick-slide) {
+    height: inherit !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+:global(.slick-slide > div) {
+    height: 100%;
+    width: 100%;
+}*/

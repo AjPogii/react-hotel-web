@@ -1,0 +1,12 @@
+.footer_container .footer_links .logo {
+    width: 24%;
+
+    height: auto;
+
+    margin-left: 5px;
+}
+
+.logo_img {
+    width: 40%;
+    height: auto;
+}

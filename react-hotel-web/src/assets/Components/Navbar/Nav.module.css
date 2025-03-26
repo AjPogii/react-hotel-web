@@ -1,0 +1,152 @@
+.nav_container {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    backdrop-filter: blur(12px);
+    align-items: center;
+    padding: 0 12%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.navbarScroll {
+
+    background-color: rgba(131, 131, 131, 0.6);
+    backdrop-filter: blur(12px);
+}
+
+.nav_container .logo {
+    width: 24%;
+
+    height: auto;
+
+    margin-left: 5px;
+}
+
+.logo_img {
+    width: 60%;
+    height: auto;
+}
+
+
+
+.nav_container ul li {
+    display: inline-block;
+    margin: 0 18px;
+    position: relative;
+}
+
+
+.nav_container ul li:hover {
+    color: #94511d;
+}
+
+.nav_container ul li::after {
+
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transition: .2s;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+
+.nav_container ul li:hover:after {
+    background-color: #94511d;
+}
+
+
+.nav_container ul li a:hover {
+
+    color: #94511d;
+}
+
+
+.nav_btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav_container ul li a {
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'poppins';
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#bars {
+    border: none;
+    background-color: #94511d;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #fff;
+
+    box-shadow: 2px 2px 3px #ffffff94, inset 3px 3px 10px #ffffff94;
+    cursor: pointer;
+
+    transition: 1s;
+    display: none;
+}
+
+#bars:hover {
+    box-shadow: 0px 0px 0px #ffffff94, inset 3px 3px 10px #ffffff94;
+    transform: scale(0.9);
+}
+
+@media screen and (max-width: 1200px) {
+    #bars {
+        display: flex;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .nav_container ul {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 1);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid #fff;
+        transition: .6s;
+    }
+
+    .nav_container ul li::after {
+        left: 10%;
+        top: 35px;
+    }
+
+    .nav_container .active {
+        left: 0;
+    }
+
+    .nav_container ul li {
+        display: block;
+        margin: 5px 0;
+        padding: 25px 0;
+        padding-left: 15%;
+        border-bottom: rgba(131, 131, 131, 0.4);
+    }
+
+    .nav_container ul li:last-child {
+        border: none;
+    }
+
+}
