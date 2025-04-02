@@ -1,232 +1,154 @@
 .Rooms_container {
+    max-width: 1200px;
     margin: 0 auto;
-    width: 90%;
-    border: 2px solid red;
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
+    padding: 7rem 1rem 2rem 1rem;
 }
 
 .Rooms_title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
-.Rooms_title p {
-    font-size: 20px;
-    width: 80%;
-    color: #1e1e1e;
+.section_title {
+
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.Rooms_title h1 {
+
+    font-size: 2.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: #666;
+    line-height: 1.6;
+    max-width: 90%;
 }
 
 .Room_Cards {
-    gap: 20px;
     display: flex;
-    width: auto;
-    max-width: 90%;
-    margin: 0 auto;
-    justify-content: center;
-
-    text-align: center;
-
-
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
-.Room_Card {
-    width: calc(33.333% - 14px);
-    min-width: 280px;
-    border-radius: 0.5rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.slide {
+    flex: 1;
+    min-width: 300px;
+    max-width: calc(33.333% - 1.5rem);
+}
+
+.Room_card {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
 
-
-    margin: 0 auto;
-
-
+.Room_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .Room_Img {
-    height: 200px;
-    overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 
 .Room_Img img {
     width: 100%;
-    height: 100%;
+    height: 260px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    display: block;
 }
 
-
 .Room_Content {
-    padding: 20px;
+    padding: 1.5rem;
 }
 
 .Room_Content h3 {
     font-size: 1.25rem;
-    color: #5d4b3e;
     font-weight: 500;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: baseline;
     margin-bottom: 1rem;
 }
 
+.priceAmount {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
 
-.Room_card:hover {
-    transform: translateY(-5px);
+.pricePeriod {
+    font-size: 0.875rem;
+    color: #666;
+    margin-left: 4px;
 }
 
 .features {
-    margin-bottom: 20px;
+    margin-top: 0.75rem;
 }
 
 .feature {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 8px;
-    color: #333;
-
-}
-
-.detailsButton {
-    display: block;
-    align-items: center;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 0 auto;
-    width: fit-content;
-
-
-}
-
-.bullet {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    left: 5px;
-    top: 8px;
-    background-color: #5d4b3e;
-    border-radius: 50%;
-    flex-shrink: 0;
-    text-align: left;
-    margin: 0;
-    position: absolute;
-}
-
-.arrowIcon {
-    margin-left: 5px;
-    width: 16px;
-    height: 16px;
-}
-
-.arrowButton {
-    position: absolute;
-    top: 45%;
-
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-
-}
-
-.prevButton {
-    left: -20px;
-}
-
-.nextButton {
-    right: -20px;
-}
-
-.slick-center .Room_card {
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-.slick-slide:not(.slick-center) .Room_card {
-    opacity: 0.7;
-}
-
-
-.slider {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.slide {
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-.slick-center .Room_card {
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-.slick-slide:not(.slick-center) .Room_card {
-    opacity: 0.7;
-}
-
-
-.dotsNavigation {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    position: absolute;
-    bottom: -2rem;
-    left: 0;
-    right: 0;
-
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #333;
-
-}
-
-
-.dot:hover,
-.dot.active,
-.slick-active .dot {
-    background-color: #a08a6c;
-    transform: scale(1.2);
+    color: #666;
+    font-size: 0.875rem;
 }
 
 .viewAllContainer {
-    text-align: center;
-    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .viewAllButton {
-    font-size: 1rem;
-    padding: 10px 25px;
-}
-
-/*:global(.slick-track) {
-    display: flex !important;
-}
-
-:global(.slick-slide) {
-    height: inherit !important;
-    display: flex !important;
-    justify-content: center;
+    background-color: #9c6b2b;
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 2.5rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
-:global(.slick-slide > div) {
-    height: 100%;
-    width: 100%;
-}*/
+.viewAllButton:hover {
+    background-color: #bd8430;
+}
+
+@media (max-width: 992px) {
+    .slide {
+        max-width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        max-width: 100%;
+    }
+
+    .Room_Cards {
+        flex-direction: column;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+}

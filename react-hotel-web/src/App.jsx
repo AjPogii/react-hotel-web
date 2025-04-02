@@ -1,23 +1,29 @@
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import './App.css'
-import About from './assets/Components/About/About'
-import Footer from './assets/Components/Footer/Footer'
-import Header from './assets/Components/Header/Header'
-import Nav from './assets/Components/Navbar/Nav'
-import RoomSection from './assets/Components/Room Section/RoomSection'
-import Services from './assets/Components/Services/Services'
 
+
+import Nav from './assets/Components/Navbar/Nav'
+import Home from './assets/Pages/Home/Home'
 
 
 const App = () => {
   return (
+
     <div>
-      <Nav />
-      <Header />
-      <About />
-      <RoomSection />
-      <Footer />
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+
+        </Routes>
+      </Router>
+
     </div>
+
+
+
   )
 }
 

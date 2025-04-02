@@ -1,5 +1,5 @@
 import React from "react";
-import aboutCSS from './../About/About.module.css';
+import aboutCSS from './About.module.css';
 
 import aboutImg from './../../images/hero1.jpg';
 
